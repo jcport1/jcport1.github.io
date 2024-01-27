@@ -16,6 +16,10 @@
     --line-height-small: 1.2;
 
     --blue: blue;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+
 
     --container-max-width: 1180px;
 
@@ -77,25 +81,42 @@ header {
 /* ----- Buttons and Links ----- */
 /* --------------------------------------- */
 
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
 
 /* --------------------------------------- */
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
 .nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
     background-color: #555;
     display: flex;
     justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
+    padding: 1.5rem 3.5rem;
+    /* background-color: var(--bg-color); */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Nav UL */
 .nav__items {
     display: flex;
+    gap: 2rem;
     list-style: none;
 }
 
 .nav__item {
     margin-right: var(--gutter-small);
+    font-weight: bold;
 }
 
 .nav__link {
@@ -108,9 +129,42 @@ header {
 }
 
 .nav__link:hover {
-    color: var(--blue);
+    color: var(--secondary-color);
 }
 
+/* --------------------------------------- */
+/* ----- Hero ----- */
+/* --------------------------------------- */
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    gap: 2rem;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 7rem;
+
+}
+
+/* --------------------------------------- */
+/* ----- About Section ----- */
+/* --------------------------------------- */
+
+#about {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
 
 /* --------------------------------------- */
 /* ----- Experience Section ----- */
