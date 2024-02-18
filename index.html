@@ -22,117 +22,180 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1>Hello, I'm Jeff 👋</h1>
-        <h2>Software Engineer</h2>
+        <!-- insert bg img -->
+        <div class="hero-content">
+            <h1>Hey, I'm Jeff 👋</h1>
+            <h2>Software Engineer</h2>
+        </div>
+        <!-- <div class="hero__mouse-scroll">
+            <div class="mouse"></div>
+        </div> -->
     </header>
 
     <section id="about">
-        <div class="about">
-            <h2>About Me</h2>
-            <p>I am a passionate software engineering with experience designing and implement full stack applications. 
-                I am a final year Computer Science master's student at Northeastern Univerity. I enjoy creating clean, simple software engineering solutions to complex problems.
-                During my program, I have completed two software engineering internships, including one at Amazon Web Services. </p>
+        <h2 class="main-section-heading">About Me</h2>
+        <div class="about-container">
+                <img src="/assets/portfolio-sample.jpg" class="about-photo" alt="profile image"/>
+                <p>I am a passionate software engineer with experience designing and implement full stack applications. 
+                    I am a final year Computer Science master's student at Northeastern Univerity. I enjoy creating clean, simple software engineering solutions to complex problems.
+                    During my program, I have completed two software engineering internships, including one at Amazon Web Services. </p>           
         </div>
        
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Amazon Web Services</h3>
-            <h4>Software Development Engineer Intern</h4>
-            <p class="date-range">May 2023 - August 2023</p>
-            <p class="experience-description">
-                Designed a priority queue system as a cloud solution for AWS key service, leading to improved efficiency. 
-            </p>
+        <h2 class="main-section-heading">Experience</h2>
 
+        <div class="container-timeline">
+            <div class="timeline">
+                <div class="timeline-container primary">
+                    <div class="timeline-icon">
+                        <i class="devicon-atom-original"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Software Engineer Intern @ Amazon Web Services</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">1 Hours Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container primary">
+                    <div class="timeline-icon">
+                        <i class="devicon-atom-original"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Software Engineer Co-op @ UNUM</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">1 Hours Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container primary">
+                    <div class="timeline-icon">
+                        <i class="devicon-atom-original"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Computer Science Teaching Assistant @ Northeastern University</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">1 Hours Ago</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="experience-item">
-            <h3>UNUM</h3>
-            <h4>Software Development Engineer Intern</h4>
-            <p class="date-range">January 2023 - May 2023</p>
-            <p class="experience-description">
-            Conceptualized and designed an internal full-stack web application to enable end users with data retrieval capabilities, facilitating the tracking and management of proprietary software usage. 
-            </p>
 
-        </div>
-        <div class="experience-item">
-            <h3>Northeastern University</h3>
-            <h4>Computer Science Teaching Assistant</h4>
-            <p class="date-range">February 2022 - August 2022</p>
-            <p class="experience-description">
-            Prepared and led weekly recitations, provided code feedback and debugging, and responded to student questions. Provided 1:1 tutoring for two cohorts of graduate students; graded weekly labs and assignments. 
+        <!-- <div class="experience-container">
+            <div class="experience-item">
+                <h3>Amazon Web Services</h3>
+                <h4>Software Development Engineer Intern</h4>
+                <p class="date-range">May 2023 - August 2023</p>
+                <p class="experience-description">
+                    Designed a priority queue system as a cloud solution for AWS key service, leading to improved efficiency. 
+                </p>
+    
+            </div>
+            <div class="experience-item">
+                <h3>UNUM</h3>
+                <h4>Software Development Engineer Intern</h4>
+                <p class="date-range">January 2023 - May 2023</p>
+                <p class="experience-description">
+                Conceptualized and designed an internal full-stack web application to enable end users with data retrieval capabilities, facilitating the tracking and management of proprietary software usage. 
+                </p>
+    
+            </div>
+            <div class="experience-item">
+                <h3>Northeastern University</h3>
+                <h4>Computer Science Teaching Assistant</h4>
+                <p class="date-range">February 2022 - August 2022</p>
+                <p class="experience-description">
+                Prepared and led weekly recitations, provided code feedback and debugging, and responded to student questions. Provided 1:1 tutoring for two cohorts of graduate students; graded weekly labs and assignments. 
+                </p>
+            </div>
+        </div> -->
 
-            </p>
-
-        </div>
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-item">
-            <h3>EBirder</h3>
-            <p class="project-description">
-                Conceptualized, designed, and implemented EBirder using JavaScript technologies, including React, Express.js, and Node.js and a NoSQL (mongoDB) database for a comprehensive birding application.
-            </p>
-            <a href="#" class="project-link">Check out details of the project by clicking here</a>
-        </div>
-        <div class="project-item">
-            <h3>FleetCart</h3>
-            <p class="project-description">
-                Deployed and hosted a highly available ecommerce website using EC2, RDS, Route 53, Auto Scaling Group and Virtual Private Cloud (VPC) for secure network architecture.
-            </p>
-            <a href="#" class="project-link">Check out details of the project by clicking here</a>
-        </div>
-        <div class="project-item">
-            <h3>iosNotes</h3>
-            <p class="project-description">
-                Developed and implemented iOSNotes, a robust mobile notes application using UIKit, enabling users to seamlessly create and organize their notes.
-            </p>
-            <a href="#" class="project-link">Check out details of the project by clicking here</a>
+        <h2 class="main-section-heading">Projects</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <h3>EBirder</h3>
+                <p class="project-description">
+                    Conceptualized, designed, and implemented EBirder using JavaScript technologies, including React, Express.js, and Node.js and a NoSQL (mongoDB) database for a comprehensive birding application.
+                </p>
+                <a href="#" class="project-link">Check out details of the project by clicking here</a>
+            </div>
+            <div class="project-item">
+                <h3>FleetCart</h3>
+                <p class="project-description">
+                    Deployed and hosted a highly available ecommerce website using EC2, RDS, Route 53, Auto Scaling Group and Virtual Private Cloud (VPC) for secure network architecture.
+                </p>
+                <a href="#" class="project-link">Check out details of the project by clicking here</a>
+            </div>
+            <div class="project-item">
+                <h3>FireNotes</h3>
+                <p class="project-description">
+                    Developed and implemented iOSNotes, a robust mobile notes application using UIKit, enabling users to seamlessly create and organize their notes.
+                </p>
+                <a href="#" class="project-link">Check out details of the project by clicking here</a>
+            </div>
+
         </div>
 
     </section>
 
-    <section id="Skills">
-        <h2>Skills</h2>
+    <section class="skills" id="skills">
+        <h2 class="main-section-heading">Skills</h2>
         <!-- Programming languages component -->
-        <div class="programming-languages">
+        <div class="skills-container">
             <div class="language">
-                <i class="devicon-java-plain-wordmark"></i>
-                <p>Java</p>
+                <i class="devicon-java-plain-wordmark colored"></i>
             </div>
             <div class="language">
-                <i class="devicon-python-plain"></i>
-                <p>Python</p>
+                <i class="devicon-python-plain-wordmark colored"></i>
             </div>
             <div class="language">
                 <i class="devicon-c-plain colored"></i>
-                <p>C</p>
             </div>
             <div class="language">
                 <i class="devicon-javascript-plain colored"></i>
-
-                <p>JavaScript</p>
             </div>
             <div class="language">
-                <i class="devicon-swift-plain colored"></i>
-                <p>Swift</p>
+                <i class="devicon-swift-plain-wordmark colored"></i>
             </div>
-        </ul>
+            <div class="language">
+                <i class="devicon-react-original-wordmark colored"></i>
+            </div>
+            <div class="language">
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+            </div>
+            <div class="language">
+                <i class="devicon-html5-plain-wordmark colored"></i>
+            </div>
+            <div class="language">
+                <i class="devicon-css3-plain-wordmark colored"></i>
+            </div>             
+            <div class="language">
+                <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            </div>
+            <div class="language">
+                <i class="devicon-git-plain-wordmark colored"></i>
+            </div>
+            <div class="language">
+                <i class="devicon-azuresqldatabase-plain colored"></i>
+            </div>
+        </div>
     </section>
 
-    <section id="Contact">
-        <h2>Contact</h2>
-        <h3>Say Hello!</h3>
-        <ul>
-            <li>email:</li>
-        </ul>
+    <section id="contact">
+        <div class="container">
+            <h2 class="main-section-heading">Contact</h2>
+            <h3 class="contact-cta-heading">Get in touch!</h3>
+            <p>If you have an idea or would like chat more, feel free to send me an email!</p>
+            <!-- add button -->
+            <a href="#" class="contact-button">Say Hello!</a>
+        </div>
     </section>
 
     <footer>
         <div class="row">
-            <!-- Update the links to point to your accounts -->
             <ul class="footer__social-links">
               <li class="footer__social-link-item">
                 <a href="https://github.com/jcport1" title="Link to Github Profile">
@@ -146,9 +209,8 @@
               </li>
             </ul>
       
-            <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
             <p>
-              &copy; 2024 Jeff Cuartas
+              &copy; 2024 Jeff Cuartas. All rights reserved.
             </p>
           </div>
     </footer>
