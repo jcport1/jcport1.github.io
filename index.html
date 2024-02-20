@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
@@ -12,6 +15,7 @@
   
     <nav class="nav" role="navigation">
         <ul class="nav__items">
+            <li class="nav__item"><a href="#hero" class="nav__link">🚀</a></li>
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
             <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
             <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
@@ -21,12 +25,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="hero">
         <!-- insert bg img -->
         <div class="hero-content">
             <h1>Hey, I'm Jeff 👋</h1>
             <h2>Software Engineer</h2>
+            <p>I'm a software engineer based out of Portland, ME with experience designing and implementing full-stack services to provide customers with what they want, when they want.</p>
         </div>
+        <a href="#about">
+            <div class="scrolldown" style="--color: skyblue">
+                <div class="chevrons">
+                    <div class="chevrondown"></div>
+                    <div class="chevrondown"></div>
+                </div>
+            </div>
+        </a>
         <!-- <div class="hero__mouse-scroll">
             <div class="mouse"></div>
         </div> -->
@@ -36,7 +49,7 @@
         <h2 class="main-section-heading">About Me</h2>
         <div class="about-container">
                 <img src="/assets/portfolio-sample.jpg" class="about-photo" alt="profile image"/>
-                <p>I am a passionate software engineer with experience designing and implement full stack applications. 
+                <p>I am a passionate software engineer with experience designing and implementing full stack applications. 
                     I am a final year Computer Science master's student at Northeastern Univerity. I enjoy creating clean, simple software engineering solutions to complex problems.
                     During my program, I have completed two software engineering internships, including one at Amazon Web Services. </p>           
         </div>
@@ -54,8 +67,13 @@
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title"><span class="badge">Software Engineer Intern @ Amazon Web Services</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p class="timeline-subtitle">1 Hours Ago</p>
+                        <p class="timeline-subtitle">May 2023 - August 2023 </p>
+                        <p>Designed a priority queue system as a cloud solution for AWS key service, leading to improved efficiency.</p>
+                        <ul class="timeline-technologies">
+                            <li class="timeline-technologies-items">Java</li>
+                            <li class="timeline-technologies-items">AWS</li>
+                            <li class="timeline-technologies-items">Back-end Development</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-container primary">
@@ -64,8 +82,13 @@
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title"><span class="badge">Software Engineer Co-op @ UNUM</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p class="timeline-subtitle">1 Hours Ago</p>
+                        <p class="timeline-subtitle">January 2023 - May 2023</p>
+                        <p>Conceptualized and designed an internal full-stack web application to enable end users with data retrieval capabilities, facilitating the tracking and management of proprietary software usage.</p>
+                        <ul class="timeline-technologies">
+                            <li class="timeline-technologies-items">React</li>
+                            <li class="timeline-technologies-items">JavaScript</li>
+                            <li class="timeline-technologies-items">Full-Stack Development</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-container primary">
@@ -74,8 +97,13 @@
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title"><span class="badge">Computer Science Teaching Assistant @ Northeastern University</span></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                        <p class="timeline-subtitle">1 Hours Ago</p>
+                        <p class="timeline-subtitle">Feb 2022 - August 2022</p>
+                        <p>Prepared and led weekly recitations, provided code feedback and debugging in C and Python, and graded assignments.</p>
+                        <ul class="timeline-technologies">
+                            <li class="timeline-technologies-items">Python</li>
+                            <li class="timeline-technologies-items">C</li>
+                            <li class="timeline-technologies-items">Data Structures & Algorithms</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -115,26 +143,44 @@
     <section id="projects">
         <h2 class="main-section-heading">Projects</h2>
         <div class="projects-container">
+                <div class="project-item">
+                    <img src="/assets/portfolio-sample.jpg" class="project-photo" alt="profile image"/>
+                    <h3>EBirder</h3>
+                    <p class="project-description">
+                        Conceptualized, designed, and implemented EBirder using JavaScript technologies, including React, Express.js, and Node.js and a NoSQL (mongoDB) database for a comprehensive birding application.
+                    </p>
+                    <ul class="project-technologies">
+                        <li class="project-technologies-item">React</li>
+                        <li class="project-technologies-item">JavaScript</li>
+                        <li class="project-technologies-item">Node.JS</li>
+                    </ul>
+                    <a href="#" class="project-link">Check out details of the project</a>
+                </div>
             <div class="project-item">
-                <h3>EBirder</h3>
-                <p class="project-description">
-                    Conceptualized, designed, and implemented EBirder using JavaScript technologies, including React, Express.js, and Node.js and a NoSQL (mongoDB) database for a comprehensive birding application.
-                </p>
-                <a href="#" class="project-link">Check out details of the project by clicking here</a>
-            </div>
-            <div class="project-item">
+                <img src="/assets/portfolio-sample.jpg" class="project-photo" alt="profile image"/>
                 <h3>FleetCart</h3>
                 <p class="project-description">
                     Deployed and hosted a highly available ecommerce website using EC2, RDS, Route 53, Auto Scaling Group and Virtual Private Cloud (VPC) for secure network architecture.
                 </p>
-                <a href="#" class="project-link">Check out details of the project by clicking here</a>
+                <ul class="project-technologies">
+                    <li class="project-technologies-item">AWS</li>
+                    <li class="project-technologies-item">Cloud Computing</li>
+                    <li class="project-technologies-item">Linux</li>
+                </ul>
+                <a href="#" class="project-link">Check out details of the project</a>
             </div>
             <div class="project-item">
+                <img src="/assets/portfolio-sample.jpg" class="project-photo" alt="profile image"/>
                 <h3>FireNotes</h3>
                 <p class="project-description">
                     Developed and implemented iOSNotes, a robust mobile notes application using UIKit, enabling users to seamlessly create and organize their notes.
                 </p>
-                <a href="#" class="project-link">Check out details of the project by clicking here</a>
+                <ul class="project-technologies">
+                    <li class="project-technologies-item">Swift</li>
+                    <li class="project-technologies-item">iOS</li>
+                    <li class="project-technologies-item">UIKit</li>
+                </ul>
+                <a href="#" class="project-link">Check out details of the project</a>
             </div>
 
         </div>
@@ -144,43 +190,93 @@
     <section class="skills" id="skills">
         <h2 class="main-section-heading">Skills</h2>
         <!-- Programming languages component -->
-        <div class="skills-container">
-            <div class="language">
-                <i class="devicon-java-plain-wordmark colored"></i>
+        <div class="skills-main-container">
+            <div class="skills-container">
+                <div class="skill-title">
+                    <h2>Languages</h2>
+                </div>
+                <div class="skills-programming">
+                    <div class="language">
+                        <i class="devicon-java-plain-wordmark colored"></i>
+                    </div>
+                    <div class="language">
+                        <i class="devicon-python-plain-wordmark colored"></i>
+                    </div>
+                    <div class="language">
+                        <i class="devicon-c-plain colored"></i>
+                    </div>
+                    <div class="language">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <div class="language">
+                        <i class="devicon-swift-plain-wordmark colored"></i>
+                    </div>
+                    <div class="language">
+                        <i class="devicon-azuresqldatabase-plain colored"></i>
+                    </div>           
+                </div>
             </div>
-            <div class="language">
-                <i class="devicon-python-plain-wordmark colored"></i>
+
+            <div class="skills-container">
+                <div class="skill-title">
+                    <h2>Frameworks & Libraries</h2>
+                </div>
+                    <div class="skills-programming">
+                        <div class="language">
+                            <i class="devicon-react-original-wordmark colored"></i>
+                        </div>
+                        <div class="language">
+                                <i class="devicon-nodejs-plain-wordmark colored"></i>
+                        </div>
+                        <div class="language">
+                            <i class="devicon-pandas-plain-wordmark colored"></i>
+                        </div>
+                        <div class="language">
+                            <i class="devicon-html5-plain-wordmark colored"></i>
+                        </div>
+                        <div class="language">
+                            <i class="devicon-css3-plain-wordmark colored"></i>
+                        </div>  
+                    </div>
             </div>
-            <div class="language">
-                <i class="devicon-c-plain colored"></i>
+
+            <div class="skills-container">
+                <div class="skill-title">
+                    <h2>Tools & OS</h2>
+                </div>
+                    <div class="skills-programming">
+                        <div class="language">
+                            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                        </div>
+                        <div class="language">
+                            <i class="devicon-git-plain-wordmark colored"></i>
+                        </div>
+                        <div class="language">
+                            <i class="devicon-linux-plain colored"></i>
+                        </div>
+                        <div class="language">  
+                            <i class="devicon-mysql-plain-wordmark colored"></i>
+                        </div>
+                           
+                    </div>
             </div>
-            <div class="language">
-                <i class="devicon-javascript-plain colored"></i>
+
+
+            <div class="skills-container">
+                <div class="skill-title">
+                    <h2>Certifications</h2>
+                </div>
+                    <div class="skills-programming">
+                        <div class="language">
+                            <i class="devicon-react-original-wordmark colored"></i>
+                        </div>
+                        <div class="language">
+                                <i class="devicon-nodejs-plain-wordmark colored"></i>
+                        </div>
+                           
+                    </div>
             </div>
-            <div class="language">
-                <i class="devicon-swift-plain-wordmark colored"></i>
-            </div>
-            <div class="language">
-                <i class="devicon-react-original-wordmark colored"></i>
-            </div>
-            <div class="language">
-                <i class="devicon-nodejs-plain-wordmark colored"></i>
-            </div>
-            <div class="language">
-                <i class="devicon-html5-plain-wordmark colored"></i>
-            </div>
-            <div class="language">
-                <i class="devicon-css3-plain-wordmark colored"></i>
-            </div>             
-            <div class="language">
-                <i class="devicon-amazonwebservices-plain-wordmark"></i>
-            </div>
-            <div class="language">
-                <i class="devicon-git-plain-wordmark colored"></i>
-            </div>
-            <div class="language">
-                <i class="devicon-azuresqldatabase-plain colored"></i>
-            </div>
+
         </div>
     </section>
 
@@ -188,9 +284,11 @@
         <div class="container">
             <h2 class="main-section-heading">Contact</h2>
             <h3 class="contact-cta-heading">Get in touch!</h3>
-            <p>If you have an idea or would like chat more, feel free to send me an email!</p>
+            <p>If you have an idea or would like to chat more, feel free to send me an email!</p>
             <!-- add button -->
-            <a href="#" class="contact-button">Say Hello!</a>
+            <a href="mailto:jefferson.cuartas@gmail.com">
+                <button class="fancy-button">Say Hello!</button>
+            </a>
         </div>
     </section>
 
