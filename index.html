@@ -15,13 +15,14 @@
   
     <nav class="nav" role="navigation">
         <ul class="nav__items">
-            <li class="nav__item"><a href="#hero" class="nav__link">🚀</a></li>
+            <li class="nav__item"><a href="#hero" class="nav__link hover-text">🚀<span class="tooltip-text" id="left">Beam me up, Scottie!</span></a></li>
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+            <li class="nav__item"><a href="#experience" class="nav__link" id="nav__link">Experience</a></li>
             <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
             <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
+        <img src="assets/menu.svg" class="burger-menu" id="burger-menu" alt="burger menu" />
     </nav>
 
     <!-- Hero Section -->
@@ -30,7 +31,7 @@
         <div class="hero-content">
             <h1>Hey, I'm Jeff 👋</h1>
             <h2>Software Engineer</h2>
-            <p>I'm a software engineer based out of Portland, ME with experience designing and implementing full-stack services to provide customers with what they want, when they want.</p>
+            <div class="hero-text">I'm a software engineer based out of Portland, Maine with experience designing and implementing full-stack services to provide customers with what they want, when they want.</div>
         </div>
         <a href="#about">
             <div class="scrolldown" style="--color: skyblue">
@@ -40,9 +41,6 @@
                 </div>
             </div>
         </a>
-        <!-- <div class="hero__mouse-scroll">
-            <div class="mouse"></div>
-        </div> -->
     </header>
 
     <section id="about">
@@ -50,10 +48,36 @@
         <div class="about-container">
                 <img src="/assets/about_me.jpg" class="about-photo" alt="profile image"/>
                 <div class="about-content">
-                    <p>Hi! I'm Jeff. I'm a passionate software engineer with experience designing and implementing full stack applications. 
-                        I am a final year Computer Science master's student at Northeastern Univerity.</p>
-                    <p>I enjoy creating clean, simple software engineering solutions to complex problems.
-                        During my program, I have completed two software engineering internships, including one at Amazon Web Services.</p>
+                    <div class="about-content-text">Hi! I'm Jeff. I'm a passionate software engineer with experience designing and implementing full stack applications. 
+                        I am a final year Computer Science master's student at Northeastern Univerity.</div>
+                    <div class="about-content-text">I enjoy creating clean, simple software engineering solutions to complex problems.
+                        During my graduate program, I have completed two software engineering internships, including one at Amazon Web Services.</div>
+                    <div class="about-content-text">In my spare time, I enjoy hiking, discovering new strategies for Settlers of Catan, and playing tennis.</div>
+                    <div class="about-content-info-container">
+                        <div>
+                            <a href="assets/Jeff-Cuartas-24-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                <button class="fancy-button">Resume</button>
+                            </a>
+                        </div>
+                        <div class="about-icons-container">
+                            <div class="about-icon-container">
+                                <a href="https://github.com/jcport1" title="Link to Github Profile" target="_blank" rel="noopener noreferrer">
+                                    <i class="devicon-github-original-wordmark"></i>
+                                </a>
+                            </div>
+                            <div class="about-icon-container">
+                                <a href="https://www.linkedin.com/in/jeff-cuartas/"> 
+                                    <i class="devicon-linkedin-plain"></i>
+                                </a>
+                            </div>
+                            <div class="about-icon-container">
+                                <a href="https://www.twitter.com/jeff_the_coder" target="_blank" rel="noopener noreferrer">
+                                    <i class="devicon-twitter-original"></i>
+                                </a>  
+                            </div>
+                               
+                        </div>
+                    </div>
                 </div>
                          
         </div>
@@ -65,14 +89,18 @@
 
         <div class="container-timeline">
             <div class="timeline">
-                <div class="timeline-container primary">
+                <div id="openModal" class="timeline-container primary">
                     <div class="timeline-icon">
-                        <i class="devicon-atom-original"></i>
+                        <img src="/assets/aws-logo.png" alt="profile image"/>
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title"><span class="badge">Software Engineer Intern @ Amazon Web Services</span></h4>
                         <p class="timeline-subtitle">May 2023 - August 2023 </p>
-                        <p>Designed a priority queue system as a cloud solution for AWS key service, leading to improved efficiency.</p>
+                        <ul class="timeline-content">
+                            <li class="timeline-content-item">Designed a priority queue system as a cloud solution for AWS key service, leading to improved efficiency.</li>
+                            <li class="timeline-content-item">Implemented priority queue cloud solution through a microservices approach using AWS core services SQS, EC2 and
+                                S3 via AWS Java SDK, enhancing system performance.</li>
+                        </ul>
                         <ul class="timeline-technologies">
                             <li class="timeline-technologies-items">Java</li>
                             <li class="timeline-technologies-items">AWS</li>
@@ -82,12 +110,15 @@
                 </div>
                 <div class="timeline-container primary">
                     <div class="timeline-icon">
-                        <i class="devicon-atom-original"></i>
+                        <img src="/assets/UNUM-logo.png" alt="profile image"/>
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title"><span class="badge">Software Engineer Co-op @ UNUM</span></h4>
                         <p class="timeline-subtitle">January 2023 - May 2023</p>
-                        <p>Conceptualized and designed an internal full-stack web application to enable end users with data retrieval capabilities, facilitating the tracking and management of proprietary software usage.</p>
+                        <ul class="timeline-content">
+                            <li class="timeline-content-item">Conceptualized and designed an internal full-stack web application to enable end users with data retrieval capabilities, facilitating the tracking and management of proprietary software usage.</li>
+                            <li class="timeline-content-item">Integrated Restful APIs with React frontend, resulting in a highly responsive and user-friendly interface.</li>
+                        </ul>
                         <ul class="timeline-technologies">
                             <li class="timeline-technologies-items">React</li>
                             <li class="timeline-technologies-items">JavaScript</li>
@@ -97,12 +128,14 @@
                 </div>
                 <div class="timeline-container primary">
                     <div class="timeline-icon">
-                        <i class="devicon-atom-original"></i>
+                        <img src="/assets/NU_RGB.png" alt="profile image"/>
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title"><span class="badge">Computer Science Teaching Assistant @ Northeastern University</span></h4>
                         <p class="timeline-subtitle">Feb 2022 - August 2022</p>
-                        <p>Prepared and led weekly recitations, provided code feedback and debugging in C and Python, and graded assignments.</p>
+                        <ul class="timeline-content">
+                            <li class="timeline-content-item">Prepared and led weekly recitations, provided code feedback and debugging in C and Python, and graded assignments.</li>
+                        </ul>
                         <ul class="timeline-technologies">
                             <li class="timeline-technologies-items">Python</li>
                             <li class="timeline-technologies-items">C</li>
@@ -110,6 +143,13 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-inner">
+                <h2>Role 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus, sit reiciendis deserunt animi totam dolorum earum reprehenderit obcaecati nisi deleniti, optio nihil eos soluta, tempora sint cumque praesentium aut.</p>
+                <button id="closeModal">Close</button>
             </div>
         </div>
 
@@ -148,7 +188,7 @@
         <h2 class="main-section-heading">Projects</h2>
         <div class="projects-container">
                 <div class="project-item">
-                    <img src="/assets/portfolio-sample.jpg" class="project-photo" alt="profile image"/>
+                    <img src="/assets/ebird-logo.png" class="project-photo" alt="profile image"/>
                     <h3>EBirder</h3>
                     <p class="project-description">
                         Conceptualized, designed, and implemented EBirder using JavaScript technologies, including React, Express.js, and Node.js and a NoSQL (mongoDB) database for a comprehensive birding application.
@@ -158,10 +198,10 @@
                         <li class="project-technologies-item">JavaScript</li>
                         <li class="project-technologies-item">Node.JS</li>
                     </ul>
-                    <a href="https://github.com/jcport1/ml-predictor-football" class="project-link" target="_blank" rel="noopener noreferrer">Check out details of the project</a>
+                    <a href="https://github.com/jcport1/eBirder" class="project-link" target="_blank" rel="noopener noreferrer">Check out more details</a>
                 </div>
             <div class="project-item">
-                <img src="/assets/portfolio-sample.jpg" class="project-photo" alt="profile image"/>
+                <img src="/assets/AWS-fleetcart.png" class="project-photo" alt="profile image"/>
                 <h3>FleetCart</h3>
                 <p class="project-description">
                     Deployed and hosted a highly available ecommerce website using EC2, RDS, Route 53, Auto Scaling Group and Virtual Private Cloud (VPC) for secure network architecture.
@@ -171,20 +211,20 @@
                     <li class="project-technologies-item">Cloud Computing</li>
                     <li class="project-technologies-item">Linux</li>
                 </ul>
-                <a href="https://github.com/jcport1/ml-predictor-football" class="project-link" target="_blank" rel="noopener noreferrer">Check out details of the project</a>
+                <a href="https://github.com/jcport1/cloud-fleetcart" class="project-link" target="_blank" rel="noopener noreferrer">Check out more details</a>
             </div>
             <div class="project-item">
-                <img src="/assets/portfolio-sample.jpg" class="project-photo" alt="profile image"/>
+                <img src="/assets/firenotes.png" class="project-photo" alt="profile image"/>
                 <h3>FireNotes</h3>
                 <p class="project-description">
-                    Developed and implemented iOSNotes, a robust mobile notes application using UIKit, enabling users to seamlessly create and organize their notes.
+                    Developed and implemented a robust mobile notes application using UIKit, enabling users to seamlessly create and organize their notes.
                 </p>
                 <ul class="project-technologies">
                     <li class="project-technologies-item">Swift</li>
                     <li class="project-technologies-item">iOS</li>
                     <li class="project-technologies-item">UIKit</li>
                 </ul>
-                <a href="https://github.com/jcport1/ml-predictor-football" class="project-link" target="_blank" rel="noopener noreferrer">Check out details of the project</a>
+                <a href="https://github.com/jcport1/fire-notes" class="project-link" target="_blank" rel="noopener noreferrer">Check out more details</a>
             </div>
 
         </div>
@@ -199,23 +239,23 @@
                 <div class="skill-title">
                     <h2>Languages</h2>
                 </div>
-                <div class="skills-programming">
-                    <div class="language">
+                <div class="skills-sub-container">
+                    <div class="icon-container">
                         <i class="devicon-java-plain-wordmark colored"></i>
                     </div>
-                    <div class="language">
+                    <div class="icon-container">
                         <i class="devicon-python-plain-wordmark colored"></i>
                     </div>
-                    <div class="language">
+                    <div class="icon-container">
                         <i class="devicon-c-plain colored"></i>
                     </div>
-                    <div class="language">
+                    <div class="icon-container">
                         <i class="devicon-javascript-plain colored"></i>
                     </div>
-                    <div class="language">
+                    <div class="icon-container">
                         <i class="devicon-swift-plain-wordmark colored"></i>
                     </div>
-                    <div class="language">
+                    <div class="icon-container">
                         <i class="devicon-azuresqldatabase-plain colored"></i>
                     </div>           
                 </div>
@@ -225,20 +265,20 @@
                 <div class="skill-title">
                     <h2>Frameworks & Libraries</h2>
                 </div>
-                    <div class="skills-programming">
-                        <div class="language">
+                    <div class="skills-sub-container">
+                        <div class="icon-container">
                             <i class="devicon-react-original-wordmark colored"></i>
                         </div>
-                        <div class="language">
+                        <div class="icon-container">
                                 <i class="devicon-nodejs-plain-wordmark colored"></i>
                         </div>
-                        <div class="language">
-                            <i class="devicon-pandas-plain-wordmark colored"></i>
+                        <div class="icon-container">
+                            <i class="devicon-pandas-plain-wordmark"></i>
                         </div>
-                        <div class="language">
+                        <div class="icon-container">
                             <i class="devicon-html5-plain-wordmark colored"></i>
                         </div>
-                        <div class="language">
+                        <div class="icon-container">
                             <i class="devicon-css3-plain-wordmark colored"></i>
                         </div>  
                     </div>
@@ -248,18 +288,18 @@
                 <div class="skill-title">
                     <h2>Tools & OS</h2>
                 </div>
-                    <div class="skills-programming">
-                        <div class="language">
+                    <div class="skills-sub-container">
+                        <div class="icon-container">
                             <i class="devicon-amazonwebservices-plain-wordmark"></i>
                         </div>
-                        <div class="language">
+                        <div class="icon-container">
                             <i class="devicon-git-plain-wordmark colored"></i>
                         </div>
-                        <div class="language">
-                            <i class="devicon-linux-plain colored"></i>
+                        <div class="icon-container">
+                            <i class="devicon-linux-plain"></i>
                         </div>
-                        <div class="language">  
-                            <i class="devicon-mysql-plain-wordmark colored"></i>
+                        <div class="icon-container">  
+                            <i class="devicon-mysql-plain-wordmark"></i>
                         </div>
                            
                     </div>
@@ -267,18 +307,21 @@
 
 
             <div class="skills-container">
+                <!-- link to certification: https://www.credly.com/badges/b7fd4fa3-60b1-4226-ae1f-ec545ac8ced1/public_url -->
                 <div class="skill-title">
                     <h2>Certifications</h2>
                 </div>
-                    <div class="skills-programming">
-                        <div class="language">
-                            <i class="devicon-react-original-wordmark colored"></i>
-                        </div>
-                        <div class="language">
-                                <i class="devicon-nodejs-plain-wordmark colored"></i>
-                        </div>
-                           
-                    </div>
+                    <div class="skills-sub-container">
+                        <a href="https://www.credly.com/badges/b7fd4fa3-60b1-4226-ae1f-ec545ac8ced1/public_url" class="fake-icon-link" title="Link to AWS Certification" target="_blank" rel="noopener noreferrer">
+                            <div class="fake-icon">
+                                <img src="assets/aws-logo-plain.svg" alt="profile image"/>
+                                <div class="icon-content">AWS Certified Cloud Practitioner</div>
+                            </div>
+                        </a>
+                        <!-- <div class="fake-icon">
+                            <img src="/assets/amazonwebservices-plain-wordmark.svg" alt="profile image"/>
+                            <div class="icon-content">IBM Intro to AI</div>
+                        </div> -->
             </div>
 
         </div>
@@ -289,7 +332,6 @@
             <h2 class="main-section-heading">Contact</h2>
             <h3 class="contact-cta-heading">Get in touch!</h3>
             <p>If you have an idea or would like to chat more, feel free to send me an email!</p>
-            <!-- add button -->
             <a href="mailto:jefferson.cuartas@gmail.com">
                 <button class="fancy-button">Say Hello!</button>
             </a>
@@ -300,19 +342,24 @@
         <div class="row">
             <ul class="footer__social-links">
               <li class="footer__social-link-item">
-                <a href="https://github.com/jcport1" title="Link to Github Profile">
+                <a href="https://github.com/jcport1" title="Link to Github Profile" target="_blank" rel="noopener noreferrer">
                   <img src="./assets/github.svg" class="footer__social-image" alt="Github">
                 </a>
               </li>
               <li class="footer__social-link-item">
-                <a href="https://www.linkedin.com/in/jeff-cuartas/">
+                <a href="https://www.linkedin.com/in/jeff-cuartas/" target="_blank" rel="noopener noreferrer">
                   <img src="./assets/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
                 </a>
               </li>
+              <li class="footer__social-link-item">
+                <a href="https://www.twitter.com/jeff_the_coder" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/twitter-x.svg" title="Link to Twitter Profile" class="footer__social-image twitter" alt="Twitter">
+                </a>
+              </li>
             </ul>
-      
-            <p>
-              &copy; 2024 Jeff Cuartas. All rights reserved.
+            <p class="footer-credit">Designed & Built by Jeff Cuartas</p>
+            <p class="copy-right">
+              &copy; 2024 All rights reserved.
             </p>
           </div>
     </footer>
